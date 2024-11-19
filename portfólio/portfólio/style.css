@@ -1,0 +1,372 @@
+/* Configurações Gerais */  /*os comentarios foi eu que coloquei pra seperar o codigo*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+
+button:hover {
+    box-shadow: 0 6px 15px rgba(128, 128, 128, 0.6);
+    background-color: #b0b0b0;
+    transform: scale(1.15);
+}
+
+/* Estilo de Títulos */
+h2.titulo {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2.titulo span {
+    color: silver;
+}
+
+/* Estilo Flexível */
+.flex {
+    display: flex;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    padding: 40px 4%;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 95px;
+    flex-grow: 1;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav a {
+    color: #D9D9D9;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+header nav a:hover {
+    color: white;
+    transform: scale(1.15);
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: silver;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(128, 128, 128, 0.4);
+    transition: 0.3s;
+}
+
+/* Estilo do Site */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+.interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.txt-topo-site {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topo-do-site h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: silver;
+    animation: brilho 3s infinite alternate;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: white;
+    margin: 40px 0;
+    font-size: 17px;
+}
+
+@keyframes brilho {
+    0% {
+        color: silver;
+        text-shadow: 0 0 8px silver, 0 0 12px rgba(192, 192, 192, 0.8), 0 0 16px silver;
+    }
+    50% {
+        color: #b3c7e6;
+        text-shadow: 0 0 8px #b3c7e6, 0 0 12px rgba(179, 199, 230, 0.8), 0 0 16px #b3c7e6;
+    }
+    100% {
+        color: #d6ccf2;
+        text-shadow: 0 0 8px #d6ccf2, 0 0 12px rgba(214, 204, 242, 0.8), 0 0 16px #d6ccf2;
+    }
+}
+
+header {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.divisor {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, silver, transparent);
+    margin: 40px auto;
+}
+
+
+
+.logo-footer img {
+    width: 100px;
+    height: auto;
+}
+
+.img-sobre img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.img-topo-site img {
+    filter: drop-shadow(0 0 0.75rem rgb(218, 135, 42));
+    width: 300px;
+    height: auto;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: fotoflutuante 2s ease-in-out infinite alternate;
+}
+
+@keyframes fotoflutuante {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* Estilo Trabalhos */
+section.trabalhos {
+    padding: 40px 4%;
+}
+
+section.trabalhos .flex {
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trabalhos .trabalhos-box {
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.2s;
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.trabalhos .trabalhos-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.452);
+}
+
+.trabalhos .trabalhos-box i {
+    font-size: 70px;
+    color: silver;
+}
+
+.trabalhos .trabalhos-box h3 {
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+.trabalhos .trabalhos-box a p {
+    color: white; 
+    text-decoration-line: underline;
+    text-decoration-color: black;     
+}
+.trabalhos .trabalhos-box a p:hover {
+    color: lightgray; 
+    text-decoration: underline;
+    text-decoration-color: white
+}
+
+
+/* Estilo Sobre */
+section.sobre {
+    padding: 40px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: white;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: silver;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    font-size: 15px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.bnt-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: silver;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.2s;
+    margin: 10px;
+}
+
+/* Estilo Portfólio */
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.112);
+}
+
+section.portifolio .flex {
+    gap: 80px;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0;
+    transition: 2s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* Estilo rodapé */
+footer {
+    padding: 40px 4%; 
+    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+    margin: 40px 0; 
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer p i {
+    color: silver;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .logo-footer p a {
+    color: white;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
